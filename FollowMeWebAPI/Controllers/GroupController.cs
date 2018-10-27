@@ -424,7 +424,7 @@ namespace QualiAPI.Controllers
 
         [HttpPost]
         [Route("api/sendMessage/{password}/{message}")]
-        public async Task<IHttpActionResult> sendMessage(​[FromUri]string password,[FromUri]string message, [FromBody] UserProfile[] users)
+        public async Task<IHttpActionResult> sendMessage([FromUri]string password,[FromUri]string message, [FromBody] UserProfile[] users)
         {
           Group group=  await conectDB.getGroup(password);
             try
